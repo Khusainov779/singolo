@@ -24,6 +24,11 @@
   /* font-weight: 400; */
   font-style: normal;
 }
+@font-face {
+  font-family: "Lato Light";
+  src: url("./assests/fonts/Lato-Light.ttf");
+  font-weight: 300;
+}
 
 body {
   width: 1020px;
@@ -54,6 +59,7 @@ li {
 
   text-transform: uppercase;
 }
+
 ul :not(:last-child) {
   margin: 4.5px 10px;
 }
@@ -110,4 +116,22 @@ span {
   height: 32px;
   margin-top: 278px;
   margin-left: 52.5px;
+}
+
+h3 {
+  margin-left: 40px;
+  margin-top: 60px;
+  font-family: "Lato Black";
+  font-size: 30px;
+  color: #666d89;
+}
+p {
+  margin-left: 40px;
+  margin-top: 18px;
+  font-family: "Lato Light";
+  font-size: 18px;
+  color: #767e9e;
+  font-weight: 300;
+  word-spacing: 1px;
+  line-height: 30px;
 }
