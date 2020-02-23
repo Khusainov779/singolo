@@ -106,6 +106,7 @@ span {
   height: 32px;
   margin-top: 278px;
   margin-left: 40px;
+  cursor: pointer;
 }
 .right-button {
   background-image: url("assests/images/chevron-right-solid.svg");
@@ -116,6 +117,7 @@ span {
   height: 32px;
   margin-top: 278px;
   margin-left: 52.5px;
+  cursor: pointer;
 }
 
 .service {
