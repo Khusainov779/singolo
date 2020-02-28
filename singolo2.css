@@ -146,3 +146,9 @@ article p {
   color: #666d89;
   margin-right: 4px;
 }
+
+.icons a:hover {
+  color: #fff;
+  cursor: pointer;
+  border-color: #fff;
+}
