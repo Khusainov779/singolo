@@ -33,10 +33,10 @@ body {
   padding: 62px 40px 0px 40px;
   color: #f0d8d9;
 }
-.content {
+.container-3 .content {
   padding-bottom: 34px;
 }
-.content h3 {
+.container-3 .content h3 {
   font-family: "Lato Black";
   font-size: 30px;
   line-height: 32px;
@@ -61,7 +61,7 @@ body {
   hyphens: none;
 }
 
-.long-text {
+.container-3 .long-text {
   font-family: "Lato Light";
   font-size: 18px;
   font-weight: 300;
