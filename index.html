@@ -17,284 +17,338 @@
   <body>
     <header>
       <div>
-        <h4 class="singolo-logo">SINGOLO<span>*</span></h4>
+        <h1 class="singolo-logo">SINGOLO<span>*</span></h1>
       </div>
       <nav>
-        <ul class="nav-links">
+        <ul id="menu" class="nav-links">
           <li>
-            <a class="active" href="#">Home</a>
+            <a class="active" href="#carousel">Home</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-        <div class="singolo-1-bg">
-            <div class="slider">
-                <button class="left-button" type="button"></button>
-                <div class="vertical">
-                <img src="./assests/images/vertical.png" />
-                </div>
-                <div class="horizontal">
-                <img src="./assests/images/horizontal.png" />
-                </div>
-                <button class="right-button" type="button"></button>
+    <main class="main">
+      <div class="carousel" id="carousel">
+        <div class="carousel-slides" id="carousel-slides">
+          <div class="carousel-slide carousel-slide-1 carousel-slide-active">   
+            <div class="vertical">
+              <img src="./assests/images/vertical.png" />
+              <div class="turnoff-leftbutton"><button id="vertical-phone" class="turnoff-button" type="button"></button></div>
             </div>
-            <div class="services">
-                <div class="content">
-                <h2 class="service">Our Services</h2>
-                <p class="long-text">
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-                    Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
-                    lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
-                    tortor mauris condimentum nibh.
-                </p>
-                </div></br>
-                <div class="row">
-                <div class="box">
-                    <div class="box-icon-wrapper">
-                    <img class="icon" src="./assests/images/pen.svg" alt="pen" />
-                    </div>
-                    <article>
-                    <h3>Custom Design</h3>
-                    <p>
-                        Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
-                        laoreet, viverra lacus ut, ultrices velit.
-                    </p>
-                    </article>
-                </div>
-                <div class="box">
-                    <div class="box-icon-wrapper">
-                    <img class="icon" src="./assests/images/bulb.svg" alt="bulb" />
-                    </div>
-                    <article>
-                    <h3>Inovative Ideas</h3>
-                    <p>
-                        Quisque luctus, quam eget molestie com- modo, lacus purus cursus
-                        purus, nec rutrum tellus dolor id lorem.
-                    </p>
-                    </article>
-                </div>
-                <div class="box">
-                    <div class="box-icon-wrapper">
-                    <img class="icon" src="./assests/images/heart.svg" alt="heart" />
-                    </div>
-                    <article>
-                    <h3>Love Is The Answer</h3>
-                    <p>
-                        Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-                        et consequat felis. Quisque condimentum.
-                    </p>
-                    </article>
-                </div>
-                <div class="box">
-                    <div class="box-icon-wrapper">
-                    <img class="icon" src="./assests/images/phone.svg" alt="phone" />
-                    </div>
-                    <article>
-                    <h3>Responsive Layout</h3>
-                    <p>
-                        Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
-                        blandit nunc ligula. Prae- sent elit leo.
-                    </p>
-                    </article>
-                </div>
-                <div class="box">
-                    <div class="box-icon-wrapper">
-                    <img class="icon" src="./assests/images/bubble.svg" alt="bubble" />
-                    </div>
-                    <article>
-                    <h3>24 / 7 Support</h3>
-                    <p>
-                        Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla
-                        a sem erat. Pellen- tesque egestas venenatis lorem.
-                    </p>
-                    </article>
-                </div>
-                <div class="box">
-                    <div class="box-icon-wrapper">
-                    <img class="icon" src="./assests/images/star.svg" alt="star" />
-                    </div>
-                    <article>
-                    <h3>Feel Like A Star</h3>
-                    <p>
-                        Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
-                        Fusce vitae aliquam tellus.
-                    </p>
-                    </article>
-                </div>
-                </div>
+            <div class="horizontal">
+              <img src="./assests/images/horizontal.png" />
+              <div class="turnoff-rightbutton"><button id="horizontal-phone" class="turnoff-button" type="button"></button></div>
             </div>
-        </div>
-        <div class="singolo-2">
-            <div class="bg-color">
-              <h1 class="portfolio">Portfolio</h1>
-              <p class="long-text">
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-                eget lacinia odio sem nec elit.
-              </p>
-              <div class="buttons">
-                <button class="active" type="button">All</button>
-                <button type="button">Web Design</button>
-                <button type="button">Graphic Design</button>
-                <button type="button">Artwork</button>
-              </div>
-              <div class="row-2">
-                <!-- I was going to use object fit in css, but there was not taken the center part of the pics.(various parts), then i have to cut the pics on Ps -->
-                <div class="image-wrap">
-                  <img src="./assests/images/ship.png" />
-                  <img class="pic" src="./assests/images/girl.png" />
-                  <img class="pic" src="./assests/images/city.png" />
-                  <img class="pic" src="./assests/images/robot.png" />
-                  <img src="./assests/images/monster1.png" />
-                  <img class="pic" src="./assests/images/sdk.png" />
-                  <img class="pic" src="./assests/images/strange.png" />
-                  <img class="pic" src="./assests/images/birds.png" />
-                  <img src="./assests/images/monster2.png" />
-                  <img class="pic" src="./assests/images/reel.png" />
-                  <img class="pic" src="./assests/images/monster3.png" />
-                  <img class="pic" src="./assests/images/strange2.png" />
-                  <!-- hidden elemets -->
-                  <img class="pic" src="./assests/images/monster3.png" />
-                  <img class="pic" src="./assests/images/strange2.png" />
-                  <!-- hidden elements -->
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="content">
-                <h3>About Us</h3>
-                <p class="long-text">
-                  Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                  condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
-                  ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
-                  cursus commodo, tortor mauris condimentum nibh.
-                </p>
-              </div>
-              <div class="face">
-                <div class="box">
-                  <img src="./assests/images/face1.png" />
-                  <article>
-                    <h3>Adam Jensen</h3>
-                    <p>
-                      Quisque luctus, quam eget molestie commodo, lacus purus cursus
-                      purus, nec rutrum tellus dolor id lorem.
-                    </p>
-                  </article>
-                  <div class="icons">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-google-plus"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                  </div>
-                </div>
-                <div class="box">
-                  <img src="./assests/images/face2.png" />
-                  <article>
-                    <h3>Desmond Miles</h3>
-                    <p>
-                      Curabitur vestibulum eget mauris quis laoreet. Phasellus in
-                      quam laoreet, viverra lacus ut, ultrices velit.
-                    </p>
-                  </article>
-                  <div class="icons">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-google-plus"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                  </div>
-                </div>
-                <div class="box">
-                  <img src="./assests/images/face3.png" />
-                  <article>
-                    <h3>Scolara Visari</h3>
-                    <p>
-                      Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
-                      turpis, et consequat felis. Quisque condimentum.
-                    </p>
-                  </article>
-                  <div class="icons">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-google-plus"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                  </div>
-                </div>
-              </div>
+            <div id="vertical-black" class="hidden"></div>
+            <div id="horizontal-black" class="hidden"></div>
+          </div>
+          <div class="carousel-slide carousel-slide-2 carousel-slide"> 
+            <div class="three-phones">
+            <img src="./assests/images/three-phones.png" />
             </div>
           </div>
-          <div class="container-3">
-            <div class="content">
-              <h3>Get a Quote</h3>
-              <p class="long-text">
+        </div>
+        <div class="carousel-btns">
+          <button class="carousel-btn carousel-btn-left" type="button" id="carousel-left-btn"></button>              
+          <button class="carousel-btn carousel-btn-right" type="button" id="carousel-right-btn"></button>
+        </div>
+      </div>
+      <div id="services" class="services">
+          <div class="content">
+            <h2 class="service">Our Services</h2>
+            <p class="long-text">
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                 Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
                 lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
                 tortor mauris condimentum nibh.
+            </p>
+          </div></br>
+          <div class="row our-services-row">
+            <div class="box">
+                <div class="box-icon-wrapper">
+                  <img class="icon" src="./assests/images/pen.svg" alt="pen" />
+                </div>
+                <article>
+                  <h3>Custom Design</h3>
+                  <p>
+                    Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                    laoreet, viverra lacus ut, ultrices velit.
+                  </p>
+                </article>
+            </div>
+            <div class="box">
+                <div class="box-icon-wrapper">
+                <img class="icon" src="./assests/images/bulb.svg" alt="bulb" />
+                </div>
+                <article>
+                <h3>Inovative Ideas</h3>
+                <p>
+                    Quisque luctus, quam eget molestie com- modo, lacus purus cursus
+                    purus, nec rutrum tellus dolor id lorem.
+                </p>
+                </article>
+            </div>
+            <div class="box">
+                <div class="box-icon-wrapper">
+                <img class="icon" src="./assests/images/heart.svg" alt="heart" />
+                </div>
+                <article>
+                <h3>Love Is The Answer</h3>
+                <p>
+                    Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
+                    et consequat felis. Quisque condimentum.
+                </p>
+                </article>
+            </div>
+            <div class="box">
+                <div class="box-icon-wrapper">
+                <img class="icon" src="./assests/images/phone.svg" alt="phone" />
+                </div>
+                <article>
+                <h3>Responsive Layout</h3>
+                <p>
+                    Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
+                    blandit nunc ligula. Prae- sent elit leo.
+                </p>
+                </article>
+            </div>
+            <div class="box">
+                <div class="box-icon-wrapper">
+                <img class="icon" src="./assests/images/bubble.svg" alt="bubble" />
+                </div>
+                <article>
+                <h3>24 / 7 Support</h3>
+                <p>
+                    Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla
+                    a sem erat. Pellen- tesque egestas venenatis lorem.
+                </p>
+                </article>
+            </div>
+            <div class="box">
+                <div class="box-icon-wrapper">
+                <img class="icon" src="./assests/images/star.svg" alt="star" />
+                </div>
+                <article>
+                <h3>Feel Like A Star</h3>
+                <p>
+                    Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+                    Fusce vitae aliquam tellus.
+                </p>
+                </article>
+            </div>
+            </div>
+      </div>
+
+    <div id = "portfolio" >
+        <div class="bg-color">
+          <h2 class="portfolio">Portfolio</h2>
+          <p class="long-text">
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+            eget lacinia odio sem nec elit.
+          </p>
+          <div id="portfolio-buttons" class="buttons">
+            <button class="portfolio-btn-active" type="button">All</button>
+            <button class="portfolio-btn" type="button">Web Design</button>
+            <button class="portfolio-btn" type="button">Graphic Design</button>
+            <button class="portfolio-btn" type="button">Artwork</button>
+          </div>
+          <div class="row">
+            <!-- I was going to use object fit in css, but there was not taken the center part of the pics.(various parts), then i have to cut the pics on Ps -->
+            <div id="images-row" class="portfolio-row row">
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/ship.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/girl.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/city.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/robot.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/monster1.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/sdk.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/strange.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/birds.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/monster2.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/reel.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/monster3.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/strange2.png" />
+              </div>
+              <!-- hidden elemets -->
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/monster3.png" />
+              </div>
+              <div class="col-md-3 portfolio-col">
+                <img class="portfolio-img" src="./assests/images/strange2.png" />
+              </div>
+              <!-- hidden elements -->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div id="about" class="container">
+        <div class="content">
+          <h2>About Us</h2>
+          <p class="long-text">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
+            ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh.
+          </p>
+        </div>
+        <div class="face">
+          <div class="box">
+            <img src="./assests/images/face1.png" />
+            <article>
+              <h3>Adam Jensen</h3>
+              <p>
+                Quisque luctus, quam eget molestie commodo, lacus purus cursus
+                purus, nec rutrum tellus dolor id lorem.
+              </p>
+            </article>
+            <div class="icons">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-google-plus"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+            </div>
+          </div>
+          <div class="box">
+            <img src="./assests/images/face2.png" />
+            <article>
+              <h3>Desmond Miles</h3>
+              <p>
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in
+                quam laoreet, viverra lacus ut, ultrices velit.
+              </p>
+            </article>
+            <div class="icons">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-google-plus"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+            </div>
+          </div>
+          <div class="box">
+            <img src="./assests/images/face3.png" />
+            <article>
+              <h3>Scolara Visari</h3>
+              <p>
+                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                turpis, et consequat felis. Quisque condimentum.
+              </p>
+            </article>
+            <div class="icons">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-google-plus"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact" class="container-3">
+        <div class="content">
+          <h2>Get a Quote</h2>
+          <p class="long-text">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
+            lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+            tortor mauris condimentum nibh.
+          </p>
+        </div>
+        <div class="contact-row">
+          <div class="contact-block">
+            <form id="form" name="myform">
+              <input
+                type="text"
+                name="Name"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="email"
+                inputmode="email"
+                name="Email"
+                placeholder="Email"
+                required
+              />
+              <input id="subject" type="text" name="Subject" placeholder="Subject" />
+              <textarea id="description"
+                placeholder="Describe your project in detail..."
+              ></textarea>
+              <input id="submit-btn" type="submit" class="submit" value="Submit" />
+            </form>
+
+            <div id="message-block" class="hidden">
+              <div id="message">
+                <p class="message-paragraph">The message has been sent!</p>
+                <p class="result-subject">Subject: <span id="result-subject"></span></p>
+                <p class="result-description">Description: <span id="result-description"></span></p>
+                <br />
+                <button id="close-btn">OK</button>
+              </div>
+            </div>
+
+          </div>
+          <div class="info-block">
+            <div class="contact-text">
+              <h3>Contact Information</h3>
+              <p>
+                Quisque hendrerit purus dapibus, ornare nibh vitae, viver­­ra
+                nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat
+                libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
+                aliquet turpis, et consequat felis.
               </p>
             </div>
-            <div class="contact-row">
-              <div class="contact-block">
-                <form>
-                  <input
-                    type="text"
-                    name="Name"
-                    placeholder="Name (Required)"
-                    required
-                  />
-                  <input
-                    type="email"
-                    required
-                    inputmode="email"
-                    name="Email"
-                    placeholder="Email (Required)"
-                  />
-                  <input type="text" name="Subject" placeholder="Subject" />
-                  <textarea
-                    placeholder="Describe your project in detail..."
-                  ></textarea>
-                  <input type="submit" class="submit" value="Submit" />
-                </form>
+
+            <div class="contact-info">
+              <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Elm St. 14/05 Lost City</p>
               </div>
-              <div class="info-block">
-                <div class="contact-text">
-                  <h3>Contact Information</h3>
-                  <p>
-                    Quisque hendrerit purus dapibus, ornare nibh vitae, viver­­ra
-                    nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat
-                    libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
-                    aliquet turpis, et consequat felis.
-                  </p>
-                </div>
-    
-                <div class="contact-info">
-                  <div>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Elm St. 14/05 Lost City</p>
-                  </div>
-                  <div>
-                    <i class="fas fa-phone"></i>
-                    <p>03528 331 86 35</p>
-                  </div>
-                  <div>
-                    <i class="fas fa-envelope"></i>
-                    <p>info@singolo.com</p>
-                  </div>
-                </div>
+              <div>
+                <i class="fas fa-phone"></i>
+                <a href="tel:03528 331 86 35">03528 331 86 35</a>
+              </div>
+              <div>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@singolo.com">info@singolo.com</a>
               </div>
             </div>
           </div>
+        </div>
+      </div>
     </main>
     <footer>
         <h5>&copy; Copyright 2013</h5>
@@ -306,4 +360,5 @@
         </div>
       </footer>
   </body>
+  <script src="script.js"></script>
 </html>
