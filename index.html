@@ -16,10 +16,11 @@
   </head>
   <body>
     <header>
+      <button class="nav-btn-toggle" id="burger-menu"><i class="fas fa-bars"></i></button>
       <div>
-        <h1 class="singolo-logo">SINGOLO<span>*</span></h1>
+        <h1 class="singolo-logo" id="logo">SINGOLO<span>*</span></h1>
       </div>
-      <nav>
+      <nav class="menu-none">
         <ul id="menu" class="nav-links">
           <li>
             <a class="active" href="#carousel">Home</a>
@@ -45,14 +46,14 @@
           <div class="carousel-slide carousel-slide-1 carousel-slide-active">   
             <div class="vertical">
               <img src="./assests/images/vertical.png" />
-              <div class="turnoff-leftbutton"><button id="vertical-phone" class="turnoff-button" type="button"></button></div>
+              <div id="vertical-black" class="hidden"></div>
+              <button id="vertical-phone" class="turnoff-button left-turnoff-btn" type="button"></button>
             </div>
             <div class="horizontal">
               <img src="./assests/images/horizontal.png" />
-              <div class="turnoff-rightbutton"><button id="horizontal-phone" class="turnoff-button" type="button"></button></div>
+              <div id="horizontal-black" class="hidden"></div>
+              <button id="horizontal-phone" class="turnoff-button right-turnoff-btn" type="button"></button>
             </div>
-            <div id="vertical-black" class="hidden"></div>
-            <div id="horizontal-black" class="hidden"></div>
           </div>
           <div class="carousel-slide carousel-slide-2 carousel-slide"> 
             <div class="three-phones">
@@ -60,10 +61,8 @@
             </div>
           </div>
         </div>
-        <div class="carousel-btns">
-          <button class="carousel-btn carousel-btn-left" type="button" id="carousel-left-btn"></button>              
-          <button class="carousel-btn carousel-btn-right" type="button" id="carousel-right-btn"></button>
-        </div>
+        <button class="carousel-btn carousel-btn-left" type="button" id="carousel-left-btn"></button>              
+        <button class="carousel-btn carousel-btn-right" type="button" id="carousel-right-btn"></button>
       </div>
       <div id="services" class="services">
           <div class="content">
@@ -293,14 +292,14 @@
               <input
                 type="text"
                 name="Name"
-                placeholder="Name"
+                placeholder="Name (required)"
                 required
               />
               <input
                 type="email"
                 inputmode="email"
                 name="Email"
-                placeholder="Email"
+                placeholder="Email (reqiured)"
                 required
               />
               <input id="subject" type="text" name="Subject" placeholder="Subject" />

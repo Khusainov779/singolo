@@ -44,8 +44,8 @@ header {
   border-bottom: 6px solid #323746;
   justify-content: space-between;
   position: fixed;
-  width: 1020px;
-  z-index: 1;
+  width: inherit;
+  z-index: 9999;
 }
 
 header nav {
@@ -72,11 +72,11 @@ li {
   text-transform: uppercase;
 }
 
-ul .active {
-  color: #f06c64;
-}
 ul :not(:last-child) {
   margin: 4.5px 10px;
+}
+ul .active {
+  color: #f06c64;
 }
 ul :last-child {
   margin-left: 6px;
@@ -110,38 +110,29 @@ li a:not(.active):hover {
   transition: all 5s ease-in-out;
 }
 
-.carousel-btns {
+.carousel-btn {
+  width: 32px;
+  height: 32px;
   position: absolute;
-  display: flex;
-  justify-content: space-between;
+  cursor: pointer;
   top: 50%;
-  width: 100%;
-  padding: 0 40px;
   transform: translateY(-66%);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  z-index: 2;
 }
 
 .carousel-btn-left {
-  width: 32px;
-  height: 32px;
-  fill: #ca4549;
-
-  border: none;
   background-image: url("assests/images/chevron-left-solid.svg");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  cursor: pointer;
+  margin-left: 40px;
 }
 
 .carousel-btn-right {
-  width: 32px;
-  height: 32px;
-
-  border: none;
+  right: 0;
   background-image: url("assests/images/chevron-right-solid.svg");
-  background-color: transparent;
-  background-repeat: no-repeat;
   background-position: right;
-  cursor: pointer;
+  margin-right: 40px;
 }
 
 .carousel-slide {
@@ -149,6 +140,7 @@ li a:not(.active):hover {
   height: 100%;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
+  z-index: 0;
 }
 
 .carousel-slide-1 {
@@ -157,6 +149,8 @@ li a:not(.active):hover {
   display: flex;
   border-bottom: 6px solid #ea676b;
   overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .carousel-slide-2 {
@@ -170,6 +164,7 @@ li a:not(.active):hover {
 
 .carousel-slide-active {
   opacity: 1;
+  z-index: 1;
 }
 
 .three-phones {
@@ -178,49 +173,65 @@ li a:not(.active):hover {
 }
 
 .vertical {
-  margin-left: 113px;
-  margin-top: 52.5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 37px;
+  top: -2px;
 }
+
 .horizontal {
-  margin-left: 72.5px;
-  margin-top: 173px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 36px;
+  margin-top: -6px;
+  margin-left: -4px;
 }
 
 #carousel .hidden {
   display: none;
 }
 
-#horizontal-black,
-#vertical-black {
+#horizontal-black {
   position: absolute;
   background-color: #000000;
   width: 335px;
   height: 190px;
   pointer-events: none;
   border-radius: 4px;
+  top: 13px;
+  left: 59px;
 }
-#horizontal-black {
-  margin-top: 186px;
-  margin-left: 484px;
-}
+
 #vertical-black {
-  margin-top: 189px;
-  margin-left: 54px;
-  transform: rotate(90deg);
+  position: absolute;
+  background-color: #000000;
+  width: 190px;
+  height: 335px;
+  pointer-events: none;
+  border-radius: 4px;
+  right: 37px;
+  top: 64px;
 }
+
 .turnoff-button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   opacity: 0;
+  cursor: pointer;
+  z-index: 5;
+  position: absolute;
 }
-.turnoff-leftbutton {
-  margin: -78px 0px 38px 87px;
+.left-turnoff-btn {
+  bottom: 7%;
+  left: 37%;
 }
-.turnoff-rightbutton {
-  margin: -157px 0px 0px 9px;
+.right-turnoff-btn {
+  left: 2%;
+  top: 36%;
 }
-
 .service {
   margin-bottom: 18px;
   margin-left: 39px;
@@ -342,7 +353,7 @@ li a:not(.active):hover {
   font-weight: 300;
   line-height: 30px;
   padding-bottom: 10px;
-  letter-spacing: 0.15px;
+  text-align: justify;
 }
 
 .buttons button {
@@ -410,7 +421,7 @@ li a:not(.active):hover {
   font-size: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 300px;
+
   white-space: nowrap;
 }
 .face article p {
@@ -490,7 +501,7 @@ li a:not(.active):hover {
 }
 input,
 textarea {
-  width: 620px;
+  width: 100%;
   height: 38px;
   border: none;
   padding: 10px;
@@ -551,7 +562,7 @@ form {
 .contact-info a:hover {
   font-weight: bold;
 }
-.fas {
+.contact-info .fas {
   font-size: 12px;
   margin: 4px 14px 6px 0px;
 }
@@ -655,6 +666,20 @@ footer h5 {
   cursor: pointer;
   border-color: #dedede;
 }
+.nav-btn-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  color: white;
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+
+.fa-bars {
+  font-size: 29px;
+}
 
 @keyframes slideLeftClose {
   0% {
@@ -686,5 +711,391 @@ footer h5 {
   }
   100% {
     margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 1020px) and (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+  .carousel {
+    height: 451px;
+  }
+  .carousel-btn-left {
+    margin-left: 28px;
+  }
+  .carousel-btn-right {
+    margin-right: 26px;
+  }
+  .carousel-btn {
+    top: 51%;
+  }
+  .vertical img {
+    width: 181px;
+    height: 363px;
+  }
+  .vertical {
+    top: 0;
+    left: 27px;
+  }
+  #vertical-black {
+    width: 144px;
+    height: 252px;
+    right: 28px;
+    top: 48px;
+  }
+  .horizontal img {
+    height: 181px;
+    width: 363px;
+  }
+  .horizontal {
+    right: 29px;
+    margin-top: 2px;
+  }
+  #horizontal-black {
+    width: 252px;
+    height: 143px;
+    top: 10px;
+    left: 44px;
+  }
+  .three-phones {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .three-phones img {
+    width: 400px;
+    height: auto;
+  }
+  .service {
+    padding-top: 41px;
+    margin-left: 40px;
+  }
+  .our-services-row .box {
+    width: 50%;
+    margin-bottom: 52px;
+  }
+  .services .content .long-text {
+    margin-bottom: 16px;
+  }
+  .services {
+    padding-bottom: 18px;
+  }
+  .bg-color .long-text {
+    padding-bottom: 12px;
+  }
+  .buttons {
+    padding-bottom: 28px;
+  }
+  .portfolio-col {
+    margin-bottom: 17px;
+  }
+  .portfolio-img {
+    width: 216px;
+    height: auto;
+  }
+  .bg-color {
+    padding-bottom: 46px;
+  }
+  .container {
+    padding-top: 56px;
+    padding-bottom: 68px;
+  }
+  .container .content {
+    padding-bottom: 28px;
+  }
+  .container-3 {
+    padding: 56px 40px 32px 40px;
+  }
+  .container-3 .content {
+    padding-bottom: 15px;
+  }
+  .face .box img {
+    padding-bottom: 5px;
+  }
+  .face article p {
+    padding-bottom: 8px;
+  }
+  .face {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .face .box img {
+    width: 100%;
+  }
+  .face .box {
+    width: 31.9%;
+    padding: 0px;
+  }
+  form {
+    width: 441px;
+    margin-right: 29px;
+  }
+  .contact-text p {
+    word-break: normal;
+    margin-top: 1px;
+    line-height: 22.5px;
+    padding-bottom: 9px;
+  }
+  input {
+    margin-bottom: 12px;
+    padding: 2px 0px 0px 4px;
+  }
+  textarea {
+    margin-bottom: 12px;
+    padding: 8px 0px 0px 5px;
+    height: 159px;
+    resize: none;
+  }
+  footer h5 {
+    letter-spacing: 0.5px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+  body {
+    width: 100%;
+  }
+  .main {
+    padding-top: 71px;
+  }
+  .shadow {
+    box-shadow: 0px 69px 0px 550px rgba(45, 48, 58, 0.6);
+  }
+  .menu-none {
+    display: none;
+  }
+  .to-left {
+    position: sticky;
+    margin-left: -141px !important;
+    z-index: 5;
+  }
+  #burger-menu {
+    display: initial;
+    position: fixed;
+    left: 20px;
+    top: 21px;
+    transition: 0.4s linear;
+    z-index: 5;
+  }
+  .fas {
+    margin: none;
+  }
+  #logo {
+    font-size: 19px;
+    margin-bottom: 0;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  header {
+    padding: 24.5px 40px;
+    justify-content: center;
+    border-bottom: none;
+  }
+  header nav {
+    box-shadow: 0px 0 10px;
+    position: fixed;
+    height: 100%;
+    width: 278px;
+    background-color: #2d303a;
+    left: 0;
+    top: 0;
+    padding: 227px 56px;
+  }
+
+  ul :not(:last-child) {
+    margin-left: 7.5px;
+  }
+  ul :last-child {
+    margin-left: 8px;
+  }
+
+  ul li {
+    display: flex;
+  }
+  ul .active {
+    color: #f06c64;
+  }
+  li a:not(.active):hover {
+    color: #f06c64;
+    cursor: pointer;
+  }
+  .nav-links a {
+    font-size: 24px;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+  .carousel {
+    height: 220px;
+  }
+  .carousel-btn-left {
+    margin-left: 8px;
+  }
+  .carousel-btn-right {
+    margin-right: 6px;
+  }
+  .carousel-btn {
+    top: 52%;
+  }
+  .carousel-slide-1 {
+    border-bottom: none;
+  }
+  .vertical img {
+    width: 88px;
+    height: 178px;
+  }
+  .vertical {
+    top: -1px;
+    left: 12.5px;
+  }
+  #vertical-black {
+    width: 70px;
+    height: 124px;
+    right: 14px;
+    top: 23px;
+    border-radius: 2px;
+  }
+  .horizontal img {
+    height: 88px;
+    width: 178px;
+  }
+  .horizontal {
+    right: 13px;
+    margin-top: -2px;
+  }
+  #horizontal-black {
+    width: 124px;
+    height: 70px;
+    top: 5px;
+    left: 22px;
+    border-radius: 2px;
+  }
+  .three-phones {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .three-phones img {
+    width: 180px;
+    height: auto;
+  }
+  .service {
+    padding-top: 26px;
+    margin-left: 32px;
+  }
+  .our-services-row .box {
+    padding: 0 3px;
+    margin-bottom: 27px;
+  }
+  .services .content .long-text {
+    margin-bottom: 11px;
+    padding: 0 32px;
+  }
+  .services {
+    padding-bottom: 2px;
+    border-bottom: none;
+  }
+  .bg-color {
+    border-bottom: none;
+    padding: 43px 31px 27px 30px;
+  }
+  .bg-color .long-text {
+    padding-bottom: 16px;
+  }
+  .buttons {
+    padding-bottom: 26px;
+  }
+  .portfolio-col {
+    margin-bottom: 17px;
+  }
+  .portfolio-img {
+    width: 150px;
+    height: auto;
+  }
+  .col-md-3 {
+    width: 150px;
+    height: 125px;
+  }
+  .portfolio-row div:nth-child(n + 9) {
+    display: none;
+  }
+
+  .container {
+    padding: 36px 30px 10px;
+    border-bottom: none;
+  }
+  .container .content {
+    padding-bottom: 45px;
+  }
+  .container-3 {
+    padding: 48px 30px 36px 30px;
+    border-bottom: none;
+  }
+  .container-3 .content {
+    padding-bottom: 15px;
+  }
+  .container-3 .long-text {
+    padding-bottom: 40px;
+  }
+  .face .box img {
+    padding-bottom: 11px;
+  }
+  .face article p {
+    padding-bottom: 7px;
+  }
+  .face {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .face .box img {
+    width: 100%;
+  }
+  .face .box {
+    width: 100%;
+    padding: 0px;
+  }
+  .box .icons {
+    padding-bottom: 33px;
+  }
+  form {
+    width: 315px;
+    margin-right: 29px;
+  }
+  .submit {
+    height: 50px;
+    margin-bottom: 25px;
+  }
+  .contact-text p {
+    word-break: normal;
+    margin-top: 1px;
+    line-height: 22px;
+    padding-bottom: 14px;
+  }
+  .contact-info .fas {
+    padding-bottom: 3px;
+    margin: 4px 11px 6px 0px;
+  }
+  input {
+    margin-bottom: 12px;
+    padding: 2px 0px 0px 3px;
+  }
+  textarea {
+    margin-bottom: 9px;
+    padding: 8px 0px 0px 3px;
+    height: 159px;
+    resize: none;
+  }
+  footer h5 {
+    display: none;
+  }
+  footer {
+    padding: 22px 112px;
+  }
+
+  .services .box {
+    width: 100%;
+  }
+
+  .contact-row {
+    flex-wrap: wrap;
   }
 }

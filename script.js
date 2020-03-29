@@ -30,6 +30,28 @@ function onscroll(event) {
   });
 }
 
+const BURGER_MENU = document.querySelector("#burger-menu");
+const NAVIGATION = document.querySelector("body > header > nav");
+const HEADER = document.querySelector("body > header");
+
+let rotated = false;
+let opened = false;
+BURGER_MENU.addEventListener("click", () => {
+  let deg = rotated ? 0 : 90;
+  BURGER_MENU.style.transform = `rotate(${deg}deg)`;
+  if (opened) {
+    NAVIGATION.classList.add("menu-none");
+    document.querySelector("#logo").classList.remove("to-left");
+    HEADER.classList.remove("shadow");
+  } else {
+    NAVIGATION.classList.remove("menu-none");
+    document.querySelector("#logo").classList.add("to-left");
+    HEADER.classList.add("shadow");
+  }
+  rotated = !rotated;
+  opened = !opened;
+});
+
 VERTICAL_TURNOFF.addEventListener("click", () => {
   if (document.querySelector("#vertical-black").classList.contains("hidden")) {
     document.querySelector("#vertical-black").classList.remove("hidden");
