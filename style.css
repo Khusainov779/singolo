@@ -714,7 +714,7 @@ footer h5 {
   }
 }
 
-@media screen and (max-width: 1020px) and (min-width: 768px) {
+@media screen and (max-width: 1019px) and (min-width: 768px) {
   body {
     width: 100%;
   }
